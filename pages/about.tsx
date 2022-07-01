@@ -1,4 +1,5 @@
 import Header from '@/components/common/Header';
+import { MainLayout } from '@/components/Layout';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -40,7 +41,7 @@ export default function AboutPage(props: AboutPageProps) {
   };
 
   return (
-    <div>
+    <MainLayout>
       <h1>About Page</h1>
       <Header />
 
@@ -51,9 +52,11 @@ export default function AboutPage(props: AboutPageProps) {
       </ul>
 
       <button onClick={handleNextClick}>Next page</button>
-    </div>
+    </MainLayout>
   );
 }
+
+AboutPage.getLayout = MainLayout;
 
 export function getStaticProps() {
   console.log('GET STATIC PROPS');

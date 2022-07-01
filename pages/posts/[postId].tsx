@@ -20,7 +20,7 @@ export default function PostPage({ post }: PostPageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   console.log('GET STATIC PATHS');
 
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_page=1');
   const data = await response.json();
 
   const params = data.map((post: any) => ({ params: { postId: String(post.id) } }));
@@ -46,5 +46,6 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (
 
   return {
     props: { post: data },
+    revalidate: 5,
   };
 };
