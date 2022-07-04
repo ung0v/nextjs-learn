@@ -41,7 +41,7 @@ export default function AboutPage(props: AboutPageProps) {
   };
 
   return (
-    <MainLayout>
+    <div>
       <h1>About Page</h1>
       <Header />
 
@@ -52,11 +52,11 @@ export default function AboutPage(props: AboutPageProps) {
       </ul>
 
       <button onClick={handleNextClick}>Next page</button>
-    </MainLayout>
+    </div>
   );
 }
 
-AboutPage.getLayout = MainLayout;
+AboutPage.Layout = MainLayout;
 
 export function getStaticProps() {
   console.log('GET STATIC PROPS');
