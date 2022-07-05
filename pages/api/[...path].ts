@@ -20,11 +20,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     // don't send cookie to server
     // req.headers.cookie = '';
 
-    // const cookies = new Cookies(req, res);
-    // const accessToken = cookies.get('access_token');
-    // if (accessToken) {
-    //   req.headers['authorization'] = `Bearer ${accessToken}`;
-    // }
+    const cookies = new Cookies(req, res);
+    const accessToken = cookies.get('access_token');
+    if (accessToken) {
+      req.headers['authorization'] = `Bearer ${accessToken}`;
+    }
 
     proxy.web(req, res, {
       target: process.env.API_URL,

@@ -13,3 +13,8 @@ export type NextPageWithLayout = NextPage & {
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+export interface LoginPayload {
+  username: string;
+  password: string;
+}

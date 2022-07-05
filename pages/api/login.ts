@@ -69,7 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     proxy.web(req, res, {
       target: process.env.API_URL,
       changeOrigin: true,
-      selfHandleResponse: false,
+      selfHandleResponse: true,
     });
   });
 }
