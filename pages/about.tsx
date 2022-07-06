@@ -1,4 +1,4 @@
-import Header from '@/components/common/Header';
+import { Auth, Header } from '@/components/common';
 import { MainLayout } from '@/components/Layout';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
