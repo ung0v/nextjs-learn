@@ -16,16 +16,6 @@ export const MainLayout = ({ children }: LayoutProps) => {
     <Stack minHeight="100vh">
       <Header />
       <Box component="main" flexGrow={1}>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
-        <Link href="/works">
-          <a>Works</a>
-        </Link>
         {children}
       </Box>
       <Footer />
