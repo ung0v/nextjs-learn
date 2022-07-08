@@ -1,5 +1,5 @@
 import { Post } from '@/models';
-import { Card, CardContent, Stack, Typography } from '@mui/material';
+import { Card, CardContent, Divider, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 export interface PostCardProps {
@@ -16,7 +16,7 @@ export function PostCard({ postData: { title, createdAt, tags, content } }: Post
         <Stack direction="row" spacing={3} alignItems="flex-start" mb={1}>
           <Typography>{createdAt}</Typography>
           {/* <Box sx={{ borderRight: '1px solid', width: '1px', height: '100%' }}> */}
-          <span>|</span>
+          <Divider orientation="vertical" flexItem />
           {/* </Box> */}
           <Typography>{tags.join(', ')}</Typography>
         </Stack>

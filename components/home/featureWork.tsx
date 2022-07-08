@@ -9,6 +9,7 @@ export interface FeatureWorkProps {}
 
 const listWork: Work[] = [
   {
+    id: '1',
     imageUrl: work1,
     title: 'Designing Dashboards',
     year: '2020',
@@ -17,6 +18,7 @@ const listWork: Work[] = [
       'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
   },
   {
+    id: '2',
     imageUrl: work2,
     title: 'Vibrant Portraits of 2020',
     year: '2018',
@@ -25,6 +27,7 @@ const listWork: Work[] = [
       'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
   },
   {
+    id: '3',
     imageUrl: work3,
     title: '36 Days of Malayalam type',
     year: '2018',
@@ -51,7 +54,7 @@ export function FeatureWork(props: FeatureWorkProps) {
           }}
         >
           {listWork.map((work) => (
-            <WorkItem key={work.content} workData={work} />
+            <WorkItem key={work.id} workData={work} />
           ))}
         </Stack>
       </Container>

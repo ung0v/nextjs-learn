@@ -6,6 +6,7 @@ import { PostCard } from './postCard';
 
 const listPost: Post[] = [
   {
+    id: '1',
     title: 'Making a design system from scratch',
     createdAt: '12 Feb 2020',
     tags: ['Design', 'Pattern'],
@@ -13,6 +14,7 @@ const listPost: Post[] = [
       'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
   },
   {
+    id: '2',
     title: 'Creating pixel perfect icons in Figma',
     createdAt: '12 Feb 2020',
     tags: ['Figma', 'Icon Design'],
@@ -57,7 +59,7 @@ export function RecentPost() {
           }}
         >
           {listPost.map((post) => (
-            <Box key={post}>
+            <Box key={post.id}>
               <PostCard postData={post} />
             </Box>
           ))}
